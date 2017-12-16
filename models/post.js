@@ -79,7 +79,7 @@ Post.getSix = function (name,page,callback) {
         })
     })
 //修改
-    Post.edit = function (name, username, phone, email, callack) {
+    Post.edit = function (name, username, phone, email, callback) {
         mongo.open(function (err, db) {
             if (err) {
                 return callback(err);

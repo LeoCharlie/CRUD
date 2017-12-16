@@ -1,0 +1,20 @@
+<% include header%>
+<tbody>
+<% data.forEach(function (da,index) { %>
+<tr>
+    <td><%= da.name%></td>
+    <td><%= da.username%></td>
+    <td><%= da.phone%></td>
+    <td><%= da.email%></td>
+    <td><%= da.time%></td>
+    <td>状态</td>
+    <td><a href="/edit/<%= da.name%>/<%= da.username%>/<%= da.phone%>/<%= da.email%>" type="submit" class="btn btn-warning">修改</a></td>
+    <td><a href="/remove/<%= da.name%>/<%= da.username%>/<%= da.phone%>/<%= da.email%>" type="submit" class="btn btn-danger">删除</a></td>
+</tr>
+<%})%>
+</tbody>
+</table>
+
+<%include add%>
+<%include delete%>
+<% include footer%>

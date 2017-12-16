@@ -1,0 +1,45 @@
+<!--修改-->
+<!DOCTYPE html>
+<html>
+<head>
+    <h1><%= title %></h1>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.css">
+    <link rel="stylesheet" href="/stylesheets/on_off_switch.css" type="text/css">
+</head>
+<body>
+<div class="container">
+    <form method="post" role="form" action="/change/<%= data.name%>/<%= data.username%>">
+        <div class="form-group">
+            <label for="name">用户名:
+                <span style="color:red"><%= data.name%></span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="username">姓名:
+                <span style="color:red"><%= data.username%></span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" name="password" class="form-control" id="password" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">手机</label>
+            <input type="text" name="phone" class="form-control" id="phone" placeholder="<%= data.phone%>"required>
+        </div>
+        <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="<%= data.email%>"required>
+        </div>
+        <div class="modal-footer" style="margin-top: 30px">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <input type="submit" class="btn btn-primary" value="提交"></input>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
